@@ -12,6 +12,8 @@ import Gallery from "@/components/Gallery";
 import Reviews from "@/components/Reviews";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import WhatsAppFab from "@/components/WhatsAppFab";
+import LocationMap from "@/components/LocationMap";
 
 function App() {
   const [prefillPackage, setPrefillPackage] = useState(null);
@@ -52,8 +54,10 @@ function App() {
         <EditorialMarquee dark />
         <Reviews />
         <Contact prefillPackage={prefillPackage} setPrefillPackage={setPrefillPackage} />
+        <LocationMap />
       </main>
       <Footer />
+      <WhatsAppFab />
     </div>
   );
 }
