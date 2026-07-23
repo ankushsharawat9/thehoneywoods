@@ -1,54 +1,59 @@
-import { useEffect } from "react";
+import { useState } from "react";
 import "@/App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from "axios";
-import { HOME } from "@/constants/testIds";
-
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
-
-const Home = () => {
-  const helloWorldApi = async () => {
-    try {
-      const response = await axios.get(`${API}/`);
-      console.log(response.data.message);
-    } catch (e) {
-      console.error(e, `errored out requesting / api`);
-    }
-  };
-
-  useEffect(() => {
-    helloWorldApi();
-  }, []);
-
-  return (
-    <div>
-      <header className="App-header">
-        <a
-          data-testid={HOME.emergentLink}
-          className="App-link"
-          href="https://emergent.sh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4" />
-        </a>
-        <p className="mt-5">Building something incredible ~!</p>
-      </header>
-    </div>
-  );
-};
+import { Toaster } from "sonner";
+import SmoothScroll from "@/components/SmoothScroll";
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import EditorialMarquee from "@/components/EditorialMarquee";
+import Manifesto from "@/components/Manifesto";
+import Rooms from "@/components/Rooms";
+import Packages from "@/components/Packages";
+import Gallery from "@/components/Gallery";
+import Reviews from "@/components/Reviews";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 function App() {
+  const [prefillPackage, setPrefillPackage] = useState(null);
+
+  const handleInquire = (pkgId) => {
+    setPrefillPackage(pkgId);
+    const el = document.getElementById("contact");
+    if (window.__lenis && el) window.__lenis.scrollTo(el, { offset: -20, duration: 1.6 });
+    else el?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+      <div className="grain" />
+      <SmoothScroll />
+      <Toaster
+        position="top-center"
+        toastOptions={{
+          style: {
+            background: "var(--bg-dark)",
+            color: "var(--bg-primary)",
+            border: "1px solid var(--brand-mustard)",
+            borderRadius: 0,
+            fontFamily: "Manrope, sans-serif",
+            fontSize: 13,
+            letterSpacing: "0.05em",
+          },
+        }}
+      />
+      <Header />
+      <main>
+        <Hero />
+        <EditorialMarquee />
+        <Manifesto />
+        <Rooms />
+        <Packages onInquire={handleInquire} />
+        <Gallery />
+        <EditorialMarquee dark />
+        <Reviews />
+        <Contact prefillPackage={prefillPackage} setPrefillPackage={setPrefillPackage} />
+      </main>
+      <Footer />
     </div>
   );
 }
