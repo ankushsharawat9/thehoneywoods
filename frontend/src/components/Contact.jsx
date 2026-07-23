@@ -110,6 +110,7 @@ export default function Contact({ prefillPackage, setPrefillPackage }) {
           {/* Right — Form */}
           <motion.form
             onSubmit={submit}
+            noValidate
             data-testid="inquiry-form"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -120,15 +121,15 @@ export default function Contact({ prefillPackage, setPrefillPackage }) {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8">
               <div>
                 <label className="editorial-label">Full name</label>
-                <input data-testid="input-name" className="editorial-input" value={form.name} onChange={set("name")} placeholder="Aarav Mehta" required />
+                <input data-testid="input-name" className="editorial-input" value={form.name} onChange={set("name")} placeholder="Aarav Mehta" />
               </div>
               <div>
                 <label className="editorial-label">Email</label>
-                <input data-testid="input-email" type="email" className="editorial-input" value={form.email} onChange={set("email")} placeholder="you@email.com" required />
+                <input data-testid="input-email" type="email" className="editorial-input" value={form.email} onChange={set("email")} placeholder="you@email.com" />
               </div>
               <div>
                 <label className="editorial-label">Phone</label>
-                <input data-testid="input-phone" className="editorial-input" value={form.phone} onChange={set("phone")} placeholder="+91 92110 11155" required />
+                <input data-testid="input-phone" className="editorial-input" value={form.phone} onChange={set("phone")} placeholder="+91 92110 11155" />
               </div>
               <div>
                 <label className="editorial-label">Guests</label>
