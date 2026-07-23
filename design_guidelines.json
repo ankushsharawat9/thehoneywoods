@@ -1,0 +1,125 @@
+{
+  "theme": "light",
+  "typography": {
+    "headings": {
+      "fontFamily": "Playfair Display, serif",
+      "weights": ["400", "500", "700"],
+      "usage": "H1, H2, large manifesto numbers. Ranger-style classic elegance."
+    },
+    "body": {
+      "fontFamily": "Manrope, sans-serif",
+      "weights": ["300", "400", "500"],
+      "usage": "Body text, UI elements, navigation. Modern geometric contrast."
+    },
+    "accent": {
+      "fontFamily": "Playfair Display, serif",
+      "style": "italic",
+      "usage": "Editorial marquee, elegant emphasis in titles."
+    }
+  },
+  "colors": {
+    "background": {
+      "primary": "#F9F9F6",
+      "secondary": "#EAEADF",
+      "dark": "#121212"
+    },
+    "text": {
+      "primary": "#121212",
+      "secondary": "#4A4A4A",
+      "light": "#F9F9F6"
+    },
+    "brand": {
+      "mustard": "#C59B27",
+      "honey": "#D4AF37",
+      "wood": "#8B5A2B",
+      "olive": "#556B2F"
+    }
+  },
+  "visual_enhancers": {
+    "shadows": "Diffuse, natural shadows. hover:shadow-2xl with low opacity (#121212 at 10%). No hard generic shadows.",
+    "borders": "Delicate 1px borders (#121212 at 15% opacity) to create grid lines and clipped frames.",
+    "textures": "Subtle noise overlay (pointer-events-none) to give the digital page a physical paper/tactile feel.",
+    "radius": "Minimal rounding. Use rounded-none or very slight rounded-sm (2px) to keep the classic architectural feel."
+  },
+  "layouts": {
+    "spacing": "Generous Spacing Philosophy. Use p-12 to p-32 for section padding. Massive negative space around the manifesto text.",
+    "grids": "Asymmetric grids. For rooms: one large col-span-8 image, one col-span-4 block of text. Clipped image frames that don't fill 100% of the container.",
+    "hero": "100vh height. Large kinetic typography, masked line-by-line reveal. Background image with 20% charcoal overlay."
+  },
+  "motion": {
+    "scroll": "Lenis smooth scrolling is mandatory for momentum and weight.",
+    "parallax": "Subtle parallax on the hero image and large gallery images.",
+    "reveals": "Framer Motion line-by-line text reveals for H1 and Manifesto chapters. Use overflow-hidden wrappers and y-axis translation.",
+    "interactions": "Hover states on room cards should slightly scale the image within a clipped frame, and reveal a mustard yellow accent border."
+  },
+  "components": {
+    "hero": "Kinetic Hero with line-by-line text reveal ('THE HONEY WOODS'). Background: Manali snow mountain.",
+    "marquee": "Slow editorial marquee. 'MAKING LIVES WORTH LIVING — EST 2020 —'. Serif font, large text, mustard/honey accent.",
+    "manifesto": "Numbered chapters (01, 02). Massive numbers in Playfair Display. Overlapping clipped images.",
+    "rooms_showcase": "Asymmetrical layout showing luxury wooden interiors. Real photography with clipped frames.",
+    "packages": "Elegant lists for 'Manali Package'. Subtle separators.",
+    "booking_form": "Minimalist inquiry form. Use Shadcn UI but stripped of 'tech' feel. Underlined inputs or delicate borders.",
+    "header": "Sticky nav. Glassmorphism is banned here; use a solid #F9F9F6 background with a delicate bottom border, or completely transparent at top but transitioning to solid on scroll."
+  },
+  "image_urls": {
+    "hero_background": {
+      "url": "https://images.unsplash.com/photo-1618500508371-d0158e696eb0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjh8MHwxfHNlYXJjaHwyfHxtYW5hbGklMjBzbm93JTIwbW91bnRhaW4lMjBsYW5kc2NhcGV8ZW58MHx8fHwxNzg0Nzk0ODIyfDA&ixlib=rb-4.1.0&q=85",
+      "description": "Snow covered mountain for the cinematic hero section"
+    },
+    "rooms": [
+      {
+        "url": "https://images.unsplash.com/photo-1781473377323-fff4569c1eb2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzB8MHwxfHNlYXJjaHw0fHxsdXh1cnklMjBob3RlbCUyMHdvb2RlbiUyMGludGVyaW9yJTIwYmVkcm9vbXxlbnwwfHx8fDE3ODQ3OTQ4MjJ8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Luxury bedroom with wooden panels"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1731336478850-6bce7235e320?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzB8MHwxfHNlYXJjaHwyfHxsdXh1cnklMjBob3RlbCUyMHdvb2RlbiUyMGludGVyaW9yJTIwYmVkcm9vbXxlbnwwfHx8fDE3ODQ3OTQ4MjJ8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Bedroom with wooden headboard"
+      }
+    ],
+    "bathrooms": [
+      {
+        "url": "https://images.unsplash.com/photo-1756079664354-34944e001f6d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHw0fHxsdXh1cnklMjBob3RlbCUyMGJhdGhyb29tJTIwbWFyYmxlfGVufDB8fHx8MTc4NDc5NDgyMnww&ixlib=rb-4.1.0&q=85",
+        "description": "Marble vanity bathroom"
+      }
+    ],
+    "gallery_nature": [
+      {
+        "url": "https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHwzfHxwaW5lJTIwZm9yZXN0JTIwbWlzdHklMjBtb3VudGFpbnxlbnwwfHx8fDE3ODQ3OTQ4MjJ8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Misty pine forest for mood/manifesto section"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1613551356451-22d6cb1503aa?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjh8MHwxfHNlYXJjaHw0fHxtYW5hbGklMjBzbm93JTIwbW91bnRhaW4lMjBsYW5kc2NhcGV8ZW58MHx8fHwxNzg0Nzk0ODIyfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Snowy mountain and trees for gallery"
+      }
+    ]
+  },
+  "libraries": {
+    "motion": "framer-motion",
+    "scrolling": "lenis",
+    "icons": "lucide-react"
+  },
+  "accessibility": {
+    "contrast": "Ensure text over images has a gradient overlay or text-shadow to meet APCA contrast ratios.",
+    "testing": "All interactive and key informational elements MUST include a data-testid attribute to facilitate robust automated testing."
+  },
+  "instructions_to_main_agent": [
+    "You are building a Godly-level editorial boutique hotel site.",
+    "Do not use Shadcn card components. Build raw custom HTML/Tailwind structures for rooms, packages, and manifesto sections.",
+    "Use framer-motion heavily for on-scroll reveals. Specifically, implement a masked line-by-line reveal for the H1 in the hero.",
+    "Implement Lenis for smooth momentum scrolling. This is non-negotiable for the premium feel.",
+    "The marquees should use 'react-fast-marquee' and feel slow, deliberate, and editorial. DO NOT make it a fast news ticker.",
+    "For the booking form, use Shadcn form components but restyle them to look like elegant, minimalist editorial inputs (e.g., just bottom borders, no full boxes).",
+    "DO NOT center everything. Use asymmetric grid alignments.",
+    "DO NOT use Inter or standard sans for headings. Use Playfair Display.",
+    "Apply 'data-testid' to all buttons, links, and forms for testing."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Do not converge toward generic AI slop. Make it creative and distinctive.",
+    "Avoid simplistic gradients and uniform styling. Use solid colors and subtle noise textures instead.",
+    "Every interaction needs micro-animations - hover states, transitions.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "No emojis for icons. Use lucide-react.",
+    "DO NOT use a fully transparent header over hero images unless it clearly transitions to a solid background on scroll.",
+    "Use pill-shaped or sharp-cornered buttons with interactions."
+  ]
+}
